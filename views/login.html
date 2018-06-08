@@ -1,0 +1,24 @@
+<div layout="column" class="login-section">
+	<md-content layout-padding>
+	    <form name="loginForm" ng-model="loginForm" id="loginForm">
+	      <md-input-container class="md-block">
+	        <label>Email</label>
+	        <input required name="email" ng-model="userData.email" id="email">
+	        <div ng-messages="loginForm.email.$error">
+	          <div ng-message="required">This is required.</div>
+	        </div>
+	      </md-input-container>
+
+	      <md-input-container class="md-block">
+	        <label>Password</label>
+	        <input type="password" required name="password" ng-model="userData.password" id="password">
+	        <div ng-messages="loginForm.password.$error">
+	          <div ng-message="required">This is required.</div>
+	        </div>
+	      </md-input-container>
+
+	      <md-button class="md-raised md-primary pull-right" ng-click="checkLogin()">Login</md-button>
+	      <md-button class="md-raised pull-right" ng-click="reset()">Reset</md-button>
+	    </form>
+	</md-content>
+</div>
